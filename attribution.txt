@@ -1,0 +1,7 @@
+Sounds
+Explosion: JustInvoke, Freesound. https://freesound.org/people/JustInvoke/sounds/446121/
+Splash: Kayyy, Freesound. https://freesound.org/people/Kayyy/sounds/61015/
+Missile Launch: nengisuls, Freesound. https://freesound.org/people/nengisuls/sounds/157439/
+
+Shaders
+Water: "Sean's Water Shader", Groovig. https://www.reddit.com/r/Unity3D/comments/9684rh/seans_water_shader_download_it_for_free_see/
