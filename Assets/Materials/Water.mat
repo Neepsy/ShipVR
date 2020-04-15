@@ -37,7 +37,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailNormals:
         m_Texture: {fileID: 2800000, guid: e290bfd4b9bc6ec42b0197d8d1929201, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 16, y: 16}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _WaveNormals:
         m_Texture: {fileID: 2800000, guid: e290bfd4b9bc6ec42b0197d8d1929201, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 16, y: 16}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
@@ -96,7 +96,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _WaveIntensity: -1.5
-    - _WaveScrollSpeed: 0.0758
+    - _WaveScrollSpeed: 0.01
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

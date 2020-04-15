@@ -41,7 +41,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -97,13 +97,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334142692943170257}
-  m_LocalRotation: {x: -0.45563594, y: -0, z: -0, w: 0.8901662}
+  m_LocalRotation: {x: -0.32075477, y: -0, z: -0, w: 0.9471623}
   m_LocalPosition: {x: 0, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6961460442744957680}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -54.212, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -37.417004, y: 0, z: 0}
 --- !u!1 &6961460442408958495
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2592
   m_RaycastTriggerInteraction: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
@@ -733,6 +733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 6961460443723154049}
+  line: {fileID: 6961460443203960831}
+  ray: {fileID: 6961460443203960830}
+  lineWidth: 0.02
 --- !u!1 &6961460443508083162
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +886,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2592
   m_RaycastTriggerInteraction: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
@@ -1107,6 +1110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 6961460444143823431}
+  line: {fileID: 6961460443508083143}
+  ray: {fileID: 6961460443508083142}
+  lineWidth: 0.02
 --- !u!1 &6961460443723154049
 GameObject:
   m_ObjectHideFlags: 0

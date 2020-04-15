@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splashParticles: {fileID: 0}
   explodeParticles: {fileID: 0}
-  piercesArmor: 0
+  damageDealt: 1
   target: {fileID: 0}
   thrust: 15
   rotateFrames: 20
@@ -102,7 +102,7 @@ MonoBehaviour:
     type: 3}
   explodeParticles: {fileID: 1248291040127356906, guid: 82efdcb7713cea540bef7704e73e9259,
     type: 3}
-  piercesArmor: 1
+  damageDealt: 10
 --- !u!1 &717670386501083035
 GameObject:
   m_ObjectHideFlags: 0

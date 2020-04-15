@@ -20,12 +20,13 @@ public class DepthChargeSpawner : MonoBehaviour
     {
         if(timeLeft > -1)
         {
-            Debug.Log("tick");
             if (timeLeft == 0)
             {
-                Debug.Log("Spawned...");
                 GameObject charge = Instantiate(depthCharge, transform.position, Quaternion.identity);
                 charge.GetComponent<DepthCharge>().spawner = this;
+                Debug.Log("spawning");
+                charge.transform.parent = gameObject.transform;
+                charge.transform.rotation = gameObject.transform.rotation;
             }
             timeLeft--;
         }
@@ -33,7 +34,6 @@ public class DepthChargeSpawner : MonoBehaviour
 
     public void beginCountdown()
     {
-        Debug.Log("Spawning...");
         timeLeft = respawnTime;
     }
 }

@@ -16,6 +16,8 @@ public class Missile : Projectile
     private bool terminalStarted = false;
     Rigidbody rb;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,11 @@ public class Missile : Projectile
     {
         phaseFrame++;
 
-        if(target == null)
+        /*if(target == null)
         {
             //backup
             target = GameObject.FindGameObjectWithTag("Target");
-        }
+        }*/
     }
 
     public void setTarget(GameObject obj)
@@ -70,10 +72,11 @@ public class Missile : Projectile
             //check for possibility that the collider was already destroyed
             if (hit != null)
             {
-                if (hit.gameObject.tag.Equals("Target"))
+               Target tg = hit.GetComponent<Target>();
+                if (tg != null)
                 {
-                    Destroy(hit.gameObject);
-                }
+                    tg.damage(damageDealt);
+                }   
             }
         }
 

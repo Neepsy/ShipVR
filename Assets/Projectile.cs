@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Projectile : MonoBehaviour
 {
     public GameObject splashParticles;
     public GameObject explodeParticles;
-    public bool piercesArmor;
+    public int damageDealt = 1;
+
+    
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -19,12 +22,17 @@ public class Projectile : MonoBehaviour
                 Destroy(Instantiate(splashParticles, transform.position, Quaternion.identity), 10f);
             }
         }
+        
         else
         {
             if(explodeParticles != null)
             {
                 Destroy(Instantiate(explodeParticles, transform.position, Quaternion.identity), 10f);
             }
+
+            Target tg = hit.GetComponent<Target>();
+            tg?.damage(damageDealt);
+            
         }
 
         Destroy(gameObject);

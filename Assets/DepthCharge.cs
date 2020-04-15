@@ -10,6 +10,10 @@ public class DepthCharge : MonoBehaviour
     public GameObject smallSplash;
     //particles for exploding
     public GameObject explodeSplash;
+
+    public int damageDealt = 5;
+    public float blastRadius = .8f;
+
     public int lifetimeFrames = 600;
     public DepthChargeSpawner spawner;
     private bool armed = false;
@@ -49,6 +53,7 @@ public class DepthCharge : MonoBehaviour
 
     public void arm()
     {
+        gameObject.transform.parent = null;
         armed = true;
     }
 
@@ -65,12 +70,9 @@ public class DepthCharge : MonoBehaviour
             //check for possibility that the collider was already destroyed
             if (hit != null)
             {
-                //destroy all submarines in detonation radius
-                if (hit.gameObject.tag.Equals("Sub"))
-                {
-                    Debug.Log("destroying");
-                    Destroy(hit.gameObject);
-                }
+                //deal damage to all targets near explosion
+                Target tg = hit.gameObject.GetComponent<Target>();
+                tg?.damage(damageDealt);
             }
         }
 
@@ -79,9 +81,9 @@ public class DepthCharge : MonoBehaviour
             Vector3 splashPos = new Vector3(transform.position.x, 0, transform.position.z);
             Destroy(Instantiate(explodeSplash, splashPos, Quaternion.identity), 5);
         }
-
+ 
         Debug.Log("BOOOM!");
-        //Destroy(gameObject);
+        Destroy(gameObject);
 
     }
 
