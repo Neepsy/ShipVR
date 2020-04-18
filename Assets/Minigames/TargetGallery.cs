@@ -18,6 +18,7 @@ public class TargetGallery : MonoBehaviour
 
     private int targetsLeft = 0;
     private int currentWave = 0;
+    private float time = 0;
 
     [Header("Settings")]
     public int targetsPerWave = 3;
@@ -37,7 +38,10 @@ public class TargetGallery : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isActive)
+        {
+            time += Time.deltaTime;
+        }
     }
 
     //subscribe this event to onDestroyed
@@ -77,6 +81,7 @@ public class TargetGallery : MonoBehaviour
         {
             targetsLeft = 0;
             currentWave = 1;
+            time = 0;
             isActive = true;
             nextWave();
 
@@ -86,10 +91,9 @@ public class TargetGallery : MonoBehaviour
     }
     private void finish()
     {
-        Debug.Log("Done!");
         cleanArray();
         isActive = false;
-        infoDisplay.text = "You Win!";
+        infoDisplay.text = "Completed in:\n" + System.Math.Truncate(time * 100)/100 + "s";
     }
 
     private void nextWave()
