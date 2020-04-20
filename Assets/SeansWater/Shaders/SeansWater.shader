@@ -385,5 +385,5 @@ Shader "Custom/SeansWater" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+    //CustomEditor "ShaderForgeMaterialInspector"
 }

@@ -728,7 +728,7 @@ MonoBehaviour:
   m_AttachEaseInTime: 0.15
   m_MovementType: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 0
+  m_SmoothPosition: 1
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
@@ -770,8 +770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shell: {fileID: 3157276654795690688, guid: 32dea42d08f9bfc43bd8d8b4225b7d59, type: 3}
   shootLocation: {fileID: 8634493873006729736}
-  shootForce: 30
-  reloadTime: 0.5
+  shootForce: 40
+  reloadTime: 0.7
 --- !u!1 &8195513024976583520
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0

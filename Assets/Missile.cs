@@ -14,6 +14,7 @@ public class Missile : Projectile
     public int rotateFrames = 120;
     public int launchFrames = 60;
     private bool terminalStarted = false;
+    private float lifetime;
     Rigidbody rb;
 
     
@@ -23,6 +24,7 @@ public class Missile : Projectile
     {
         rb = this.GetComponent<Rigidbody>();
         phaseFrame = 0;
+        lifetime = 0;
     }
 
     // Update is called once per frame
@@ -30,11 +32,11 @@ public class Missile : Projectile
     {
         phaseFrame++;
 
-        /*if(target == null)
+        lifetime += Time.deltaTime;
+        if(lifetime > 10)
         {
-            //backup
-            target = GameObject.FindGameObjectWithTag("Target");
-        }*/
+            detonate();
+        }
     }
 
     public void setTarget(GameObject obj)
